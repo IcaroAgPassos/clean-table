@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root{
+    --img-back: url(background-water.jpg);
     --color-fundo: #006494;
     --color-div: #1b98e0e6;
-    --color-font: #e8f1f2;
+    --color-font: #d6e1e2be;
     --color-hover-td: #00000044;
 }
 
 body{
     font-family: 'Poppins', sans-serif !important;
-    letter-spacing: 0.1px;
-    background-color: var(--color-fundo);
-    color: var(--color-font);
+    background-image: var(--img-back);
+    background-size: cover;
+    background-attachment: fixed;
+    color: black;
     overflow: hidden;
     scrollbar-width: none;
 }
@@ -22,13 +24,14 @@ body{
     transform: translate(-50%, -50%);
     text-align: center;
     border: 2px solid #013d5f;
-    border-radius: 1rem;
-    background-color: var(--color-div);
+    border-radius: 0.4rem;
+    background-color: var(--color-font);
     padding: 1.5rem;
-    box-shadow: 7px 7px 10px #013d5f;
+    box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.550);
     max-height: 80%;
     min-width: 60%;
     overflow: hidden;
+    backdrop-filter: blur (10px);
 }
 
 .modern-table{
@@ -42,7 +45,7 @@ body{
     padding: 0;
     box-shadow: inset 0px -4px 10px #013d5f,
                 inset 0px 4px 10px #013d5f;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -51,6 +54,7 @@ th, td{
     padding: 0.8rem;
     border-bottom: 1.5px solid #013d5f;
     width: 1%;
+    font-size: 0.92rem;
 
 }
 
@@ -69,7 +73,7 @@ tr:hover:nth-child(1n + 2) {
     display: block;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: var(--color-font);
+    background-color: black;
     border-radius: 1rem;
 }
 
@@ -80,4 +84,18 @@ tr:hover:nth-child(1n + 2) {
 ::-webkit-scrollbar-track-piece:start{
     margin-top: 12px;
     background: transparent;
+}
+
+/*responsive*/
+
+@media only screen and (max-width: 1000px){
+h1{
+    font-size:1.6rem;
+}
+th, td{
+    padding: 0.6rem;
+    border-bottom: 1.5px solid #013d5f;
+    width: 1%;
+    font-size: 0.9rem;
+}
 }
